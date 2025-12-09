@@ -1,0 +1,36 @@
+html, body 
+{
+  margin: 0;
+  padding: 0;
+}
+
+canvas 
+{
+  display: block;
+}
+
+#main_text
+{
+  font-size: 16px;
+  font-family: 'Arial';
+  color: white;
+}
+
+#explicacao{
+  font-size: 16px;
+  font-family: 'Arial';
+  color: black;
+}
+
+#atencao{
+  font-size: 18px;
+  font-family: 'Arial';
+  color: black;
+}
+
+#input
+{
+  font-size: 14px;
+  font-family: 'Arial';
+  color: white;
+}
