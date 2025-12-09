@@ -6,14 +6,7 @@ Consultar o [enunciado do projeto](https://github.com/tecnico-so/enunciado-proj-
 
 
 # TODO😡🤥🤑
-
-### Hardlinks and symlinks!! 😳😭🫡🤞🙇🏼‍♂️
-
-#### Write functions in operations.c:
-          tfs_symlink (exerise 1.2)
-          tfs_link (exerise 1.2)
-          tfs_unlink (exerise 1.2)
-          implement mutex for thread-safe 
+          nothing
 #### DONE✅✅: 
           tfs_copy_from_external_fs (exercise 1.1)  
 #### Hardlinks and symlinks!! 😳😭🫡🤞🙇🏼‍♂️
