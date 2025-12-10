@@ -1,0 +1,12 @@
+ROW 2   8   8   8   8   8   8   3   2   2
+        COLUMN  6   8   1   8   2   1   3   1   2   4
+        9
+        HINT    9   9   B
+        HINT    9   0   B
+        HINT    9   4   B
+        HINT    5   0   B
+        HINT    5   4   B
+        HINT    5   9   B
+        HINT    1   0   B
+        HINT    1   4   B
+        HINT    1   9   B

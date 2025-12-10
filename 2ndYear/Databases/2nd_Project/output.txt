@@ -1,0 +1,24 @@
+    cust_name    
+-----------------
+ Lucina Liddiard
+(1 row)
+
+        name        
+--------------------
+ Claudius Augustine
+(1 row)
+
+ name 
+------
+ Milk
+(1 row)
+
+ order_no | valor_total 
+----------+-------------
+        1 |     11.9400
+        2 |    459.2800
+        3 |     95.7600
+        5 |    213.1700
+        9 |     62.9100
+       10 |     83.8600
+(6 rows)
