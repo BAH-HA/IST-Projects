@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="�utf-8" �>
+    <title>Hello 3D World!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@v0.163.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/"
+          }
+        }
+    </script>
+
+</head>
+<body>
+    <script type="module" src="js/main-script.js"></script>
+    <div id="hud">
+      <h3>Teclas Ativas</h3>
+      <ul id="key-map">
+          <li><span id="key-w">W</span> - Mover para Frente</li>
+          <li><span id="key-s">S</span> - Mover para Tr&aacute;s</li>
+          <li><span id="key-a">A</span> - Mover para a Direita</li>
+          <li><span id="key-q">Q</span> - Mover para a Esquerda</li>
+          <li><span id="key-e">E</span> - Subir Garra</li>
+          <li><span id="key-d">D</span> - Descer Garra</li>
+          <li><span id="key-r">R</span> - Fechar Garra</li>
+          <li><span id="key-f">F</span> - Abrir Garra</li>
+          <li><span id="key-1">1</span> - Câmera Frontal</li>
+          <li><span id="key-2">2</span> - Câmera Lateral</li>
+          <li><span id="key-3">3</span> - Câmera do Topo</li>
+          <li><span id="key-4">4</span> - Câmera fixa de Projeção Ortogonal</li>
+          <li><span id="key-5">5</span> - Câmera fixa de Projeção Perspectiva</li>
+          <li><span id="key-6">6</span> - Câmera Móvel</li>
+          <li><span id="key-7">7</span> - Toggle Wireframe</li>
+        </ul>
+      <style>
+        #hud {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 10px;
+            background-color: 0xbcd2e8;
+            border-radius: 5px;
+        }
+        #key-map {
+            font-family: 'Comic Sans MS', cursive;
+            list-style-type: none;
+            background-repeat: no-repeat;
+            padding: 10px;
+        }
+        .active-key {
+            font-weight: bold;
+            background-color: yellow;
+        }
+    </style>
+
+    <script>
+      document.addEventListener('keydown', function(event) {
+          const keyElement = document.getElementById(`key-${event.key.toLowerCase()}`);
+          if (keyElement) {
+              keyElement.classList.add('active-key');
+          }
+      });
+
+      document.addEventListener('keyup', function(event) {
+          const keyElement = document.getElementById(`key-${event.key.toLowerCase()}`);
+          if (keyElement) {
+              keyElement.classList.remove('active-key');
+          }
+      });
+  </script>
+  </div>
+</body>
+</html>

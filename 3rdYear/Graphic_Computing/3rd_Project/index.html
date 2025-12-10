@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Hello 3D World!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@v0.163.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/"
+          }
+        }
+    </script>
+    <style>
+      body { 
+          margin: 0; 
+          font-family: Arial, sans-serif; 
+          background-color: #eaeaea; 
+      }
+      canvas { 
+          display: block; 
+          background-color: #fff; 
+      }
+      #hud {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          padding: 5px;
+          background-color: rgba(188, 210, 232, 0.6);
+          border-radius: 5px;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      }
+      #key-map {
+        font-family: 'Comic Sans MS', cursive;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      #key-map li {
+          display: flex;
+          align-items: center;
+          padding: 1px;
+          margin: 5px 0;
+          background-color:rgba(188, 210, 232, 0.6);
+          border-radius: 8px;
+      }
+      #key-map li span {
+          display: inline-block;
+          width: 25px;
+          height: 25px;
+          line-height: 25px;
+          text-align: center;
+          color: black;
+          border-radius: 25%;
+          margin-right: 10px;
+          font-weight: bold;
+      }
+      .active-key {
+          font-weight: bold;
+          background-color: yellow;
+      }
+    </style>
+</head>
+<body>
+  <script type="module" src="js/main-script.js"></script>
+  <div id="hud">
+    <h3>Teclas Ativas</h3>
+    <ul id="key-map">
+        <li><span id="key-d">D</span> - Directional light</li>
+        <li><span id="key-p">P</span> - Point lights</li>
+        <li><span id="key-s">S</span> - Spotlights</li>
+        <li><span id="key-q">Q</span> - Gouraud (diffuse)</li>
+        <li><span id="key-w">W</span> - Phong</li>
+        <li><span id="key-e">E</span> - Cartoon</li>
+        <li><span id="key-r">R</span> - NormalMaps</li>
+        <li><span id="key-t">T</span> - No light reflection</li>
+        <li><span id="key-1">1</span> - Small Ring up</li>
+        <li><span id="key-2">2</span> - Medium Ring up</li>
+        <li><span id="key-3">3</span> - Big Ring up</li>
+      </ul>
+  </div>
+
+  <script>
+    document.addEventListener('keydown', function(event) {
+        const keyElement = document.getElementById(`key-${event.key.toLowerCase()}`);
+        if (keyElement) {
+            keyElement.classList.add('active-key');
+        }
+    });
+
+    document.addEventListener('keyup', function(event) {
+        const keyElement = document.getElementById(`key-${event.key.toLowerCase()}`);
+        if (keyElement) {
+            keyElement.classList.remove('active-key');
+        }
+    });
+  </script>
+</body>
+</html>
